@@ -1,5 +1,5 @@
 <?php 
-date_default_timezone_set ( "Canada/Saskatchewan" );
+date_default_timezone_set ( "Canada/Eastern" );
 $time= date('H:i:s');
 $date = date("Y-m-d");
 $weekendDay = false;
@@ -9,9 +9,9 @@ if($day == 'Sat'){
     $weekendDay = true;
 }
 if($weekendDay){
-    $query = "SELECT * from buses where Time > '$time' AND Day = 'ALL' Limit 1";
+    $query = "SELECT * from buses where Time > '$time' AND Day = 'ALL' ORDER BY `Time` ASC Limit 1 ";
 } else{
-    $query = "SELECT * from buses where Time > '$time' Limit 1";
+    $query = "SELECT * from buses where Time > '$time' ORDER BY `Time` ASC Limit 1 ";
 }
 
 $results = mysqli_query($connection, $query);

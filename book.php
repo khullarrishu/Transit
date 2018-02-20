@@ -1,5 +1,5 @@
 <?php 
-date_default_timezone_set ( "Canada/Saskatchewan" );
+date_default_timezone_set ( "Canada/Eastern" );
 include('header.php');
 	if (isset($_GET['id'])) {
 		$id = $_GET['id'];

@@ -1,4 +1,5 @@
 <!Doctype html>
+<?php date_default_timezone_set ( "Canada/Eastern" ); ?>
 <html>
 	<head>
 		<title>Lambton Transit</title>
